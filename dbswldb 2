@@ -1,0 +1,41 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="Beauty BM Studio",
+    page_icon="💄"
+)
+
+st.title("💄 Beauty BM Studio")
+
+menu = st.sidebar.selectbox(
+    "메뉴 선택",
+    [
+        "BM 대시보드",
+        "경쟁 브랜드 분석",
+        "퍼스널 컬러 추천"
+    ]
+)
+
+# BM 대시보드
+if menu == "BM 대시보드":
+
+    st.header("BM 대시보드")
+    st.write("브랜드 현황 분석")
+
+# 경쟁 브랜드 분석
+elif menu == "경쟁 브랜드 분석":
+
+    st.header("경쟁 브랜드 분석")
+    st.write("3CE / Rom&nd / Hince 분석")
+
+# 퍼스널 컬러 추천
+elif menu == "퍼스널 컬러 추천":
+
+    st.header("퍼스널 컬러 추천")
+
+    skin = st.selectbox(
+        "피부톤 선택",
+        ["봄 웜", "여름 쿨", "가을 웜", "겨울 쿨"]
+    )
+
+    st.success(f"{skin} 추천 컬러 분석 완료")
